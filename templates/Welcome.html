@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <meta http-equiv="refresh" content="0"> -->
+
+</head>
+<body>
+    <div class="container">
+        <table class="Table">
+            <tr class="Table_headers">
+            {% for header in headings %}
+            <th class="table_cell">
+                {{ header }}
+            
+            {% endfor%}
+            </th>
+            </tr>
+            {%for i in range(0,len)%}
+            <tr class="table_rows">
+                <td>{{i}}</td>
+                <td>{{check[i]}}</td>
+                <td>{{Entry[i]}}</td>
+                <td>{{Exit[i]}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+    </div>
+
+    
+</body>
+<style>
+   
+    
+    .Table{
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(250, 243, 144);
+    }
+   .table_rows{
+        background-color: rgba(228, 241, 189, 0.573);
+        padding: 25px;
+        text-align: center;
+    }
+    .table_header{
+        text-align: center;
+    }
+    .table_cell{
+        padding: 12px;
+    }
+    
+   
+
+
+
+        
+</style>
+ 
+    
+</html>
